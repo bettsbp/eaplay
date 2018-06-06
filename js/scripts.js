@@ -10,9 +10,13 @@ function isLeap(year) {
 // user logic
 $(function() {
   $("#isLeap").submit(function(event) {
-
-    var year = parseInt($("#userInput").val());
-    alert(isLeap(year));
+    $("#leapResult").show();
+    var year = parseInt($("#userLeap").val());
+    if (isLeap(year)) {
+      $("#leapResult").append("<p>" + year + " is a leap year</p>");
+    } else {
+      $("#leapResult").append("<p>" + year + " isn't quite a leap year</p>");
+    }
 
 
     event.preventDefault();
