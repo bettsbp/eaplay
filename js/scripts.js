@@ -10,17 +10,10 @@ function isLeap(year) {
 function toPigLatin(sentence) {
   var manipulate = [];
   var vowels = ['a', 'e', 'i', 'o', 'u'];
+  var temp;
   manipulate = sentence.toLowerCase().split("");
 
   // code goes below here
-
-  for (var i = 0; i < vowels.length; i += 1) {
-    if(manipulate[0] === vowels[i]) {
-        //does something
-    } else {
-        //does something else
-    }
-  }
 
   vowels.forEach(function(vowel) {
     if(manipulate[0] === vowel) {
