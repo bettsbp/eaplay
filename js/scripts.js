@@ -7,6 +7,31 @@ function isLeap(year) {
   }
 }
 
+function toPigLatin(sentence) {
+  var manipulate = [];
+  var vowels = ['a', 'e', 'i', 'o', 'u'];
+  manipulate = sentence.toLowerCase().split("");
+
+  // code goes below here
+
+  for (var i = 0; i < vowels.length; i += 1) {
+    if(manipulate[0] === vowels[i]) {
+        //does something
+    } else {
+        //does something else
+    }
+  }
+
+  vowels.forEach(function(vowel) {
+    if(manipulate[0] === vowel) {
+      //does something
+    } else {
+      //does something else
+    }
+  })
+
+}
+
 // user logic
 $(function() {
   $("#isLeap").submit(function(event) {
@@ -17,8 +42,12 @@ $(function() {
     } else {
       $("#leapResult").append("<p>" + year + " isn't quite a leap year</p>");
     }
-
-
     event.preventDefault();
+  });
+
+  $("#toPigLatin").submit(function(event) {
+    var sentence = $("#userPig").val();
+    alert(toPigLatin(sentence));
+
   });
 });
